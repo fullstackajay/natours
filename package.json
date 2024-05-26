@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "nodemon server.js",
 		"dev:node": "node server.js",
-		"start": "NODE_ENV=production nodemon server.js",
+		"start": "NODE_ENV=production node server.js",
 		"debug:brk": "node --inspect-brk server.js",
 		"debug": "node --inspect server.js",
 		"watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
@@ -45,5 +45,8 @@
 		"nodemon": "^3.1.0",
 		"parcel-bundler": "^1.12.5",
 		"prettier": "^3.2.5"
-	}
+	},
+    "engines": {
+        "node": ">=18.0.0"
+    }
 }
