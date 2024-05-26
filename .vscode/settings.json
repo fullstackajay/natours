@@ -1,0 +1,14 @@
+{
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "editor.inlineSuggest.fontFamily": "JetBrainsMono Nerd Font",
+    "debug.console.fontFamily": "JetBrainsMono Nerd Font",
+    "scm.inputFontFamily": "JetBrainsMono Nerd Font",
+    "notebook.output.fontFamily": "JetBrainsMono Nerd Font",
+    "chat.editor.fontFamily": "JetBrainsMono Nerd Font",
+    "cSpell.words": [
+        "latlng"
+    ],
+    "cSpell.ignoreWords": [
+        "Ajay"
+    ]
+}
