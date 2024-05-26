@@ -22,7 +22,7 @@ const handleJWTError = () => new AppError('Invalid token. Please log in again.',
 const handleJWTExpiredError = () => new AppError('Expired token. Please log in again.', 401)
 
 const sendErrorDev = (err, req, res) => {
-	if (req.originalUrl.startWith('/api')) {
+	if (req.originalUrl.startsWith('/api')) {
 		res.status(err.statusCode).json({
 			status: err.status,
 			message: err.message,
@@ -40,7 +40,7 @@ const sendErrorDev = (err, req, res) => {
 
 const sendErrorProd = (err, req, res) => {
 	// A. API Error
-	if (req.originalUrl.startWith('/api')) {
+	if (req.originalUrl.startsWith('/api')) {
 		// Operational error: Trusted error: send message to client
 		if (err.isOperational) {
 			res.status(err.statusCode).json({

@@ -66,15 +66,19 @@ app.use((req, res, next) => {
 	next()
 })
 
+// app.use((req, res, next) => {
+// 	if (req.originalUrl.startsWith('/api')) {
+// 		res.status(503).json({
+// 			status: 'error',
+// 			message: 'API is currently down, check back soon!'
+// 		})
+// 	} else {
+// 		next()
+// 	}
+// })
 app.use((req, res, next) => {
-	if (req.originalUrl.startsWith('/api')) {
-		res.status(503).json({
-			status: 'error',
-			message: 'API is currently down, check back soon!'
-		})
-	} else {
-		next()
-	}
+    console.log(req)
+    next()
 })
 
 app.use(compress())
