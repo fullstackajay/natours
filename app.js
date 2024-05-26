@@ -12,7 +12,7 @@ const compress = require('compression')
 const tourRouter = require('./routes/tourRoutes')
 const userRouter = require('./routes/userRoutes')
 const reviewRouter = require('./routes/reviewRoutes')
-// const viewRouter = require('./routes/viewRoutes')
+const viewRouter = require('./routes/viewRoutes')
 const bookingRouter = require('./routes/bookingRoutes')
 
 const globalErrorHandler = require('./controllers/errorController')
@@ -85,11 +85,7 @@ app.use(compress())
 
 // ROUTES
 
-app.get('/', (req, res) => {
-	res.send('Deployed')
-})
-
-// app.use('/', viewRouter)
+app.use('/', viewRouter)
 app.use('/api/v1/tours', tourRouter)
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/reviews', reviewRouter)
