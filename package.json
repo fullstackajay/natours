@@ -10,7 +10,7 @@
 		"debug:brk": "node --inspect-brk server.js",
 		"debug": "node --inspect server.js",
 		"watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-		"build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+		"build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
 	},
 	"author": "",
 	"license": "ISC",
